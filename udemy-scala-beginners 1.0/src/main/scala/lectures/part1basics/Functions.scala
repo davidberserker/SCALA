@@ -40,6 +40,46 @@ object Functions extends App{
   }
   println(aBigFunction(2))
 
+/*
+  Exercises
+ 1. A greeting function (name, age) => "Hi, my name is $name and I am $age years old
+ 2. Factorial function 1 * 2 * 3 * ... * n
+ 3. Fibonacci function
+ 4. Test if a number is prime
+*/
 
+def firstExercise (name: String, age: Int): String = {
+  "Hi, my name is " + name + " and I am " + age + " years old."
+}
+def secondExercise (number: Int) : Long ={
 
+  if(number != 1)
+    number * secondExercise(number -1)
+  else
+    1
+}
+
+def thirdExercise (number: Int): Int ={
+  if (number == 0)
+    0
+  else if (number == 1)
+      1
+  else
+      thirdExercise(number-1) + thirdExercise(number - 2)
+}
+
+def fourthExercise (number: Int): Boolean={
+    def isPrimeUntil (t: Int): Boolean= {
+      if (t <=2)
+        true
+      else number % t != 0 && isPrimeUntil(t - 1)
+    }
+  isPrimeUntil(number/2)
+  }
+println(firstExercise("David", 28))
+println(secondExercise(20))
+println(thirdExercise(20))
+println(fourthExercise(37))
+  println(fourthExercise(2003))
+  println(fourthExercise(37 *17))
 }
