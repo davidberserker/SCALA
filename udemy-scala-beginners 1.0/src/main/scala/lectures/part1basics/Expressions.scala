@@ -67,6 +67,22 @@ object Expressions extends App {
   }
   //The last value wil give the variable the type
 
+//Exercises
+//1. Difference between "Hello World" vs println("hello world")
+//R. David: Hello world is the value of a String and print will return a side effect
+  //R. Course: Hello world is the value of a String and println("hello world") is an expression which is a side effect
 
+  //2.What is the value of:
+val someValue = {
+  2 < 3
+}
+
+val someOtherValue ={
+  if(someValue) 239 else 986
+  42
+}
+
+//R. David: The value of someOtherValue is 42
+//R. Course: 42
 
 }
