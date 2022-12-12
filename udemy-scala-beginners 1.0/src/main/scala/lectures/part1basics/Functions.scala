@@ -48,10 +48,10 @@ object Functions extends App{
  4. Test if a number is prime
 */
 
-def firstExercise (name: String, age: Int): String = {
+  def firstExercise (name: String, age: Int): String = {
   "Hi, my name is " + name + " and I am " + age + " years old."
 }
-def secondExercise (number: Int) : Long ={
+  def secondExercise (number: Int) : Long ={
 
   if(number != 1)
     number * secondExercise(number -1)
@@ -59,7 +59,7 @@ def secondExercise (number: Int) : Long ={
     1
 }
 
-def thirdExercise (number: Int): Int ={
+  def thirdExercise (number: Int): Int ={
   if (number == 0)
     0
   else if (number == 1)
@@ -68,18 +68,21 @@ def thirdExercise (number: Int): Int ={
       thirdExercise(number-1) + thirdExercise(number - 2)
 }
 
-def fourthExercise (number: Int): Boolean={
+  def fourthExercise (number: Int): Boolean ={
     def isPrimeUntil (t: Int): Boolean= {
       if (t <=2)
         true
-      else number % t != 0 && isPrimeUntil(t - 1)
+      else
+        number % t != 0 && isPrimeUntil(t - 1)
     }
   isPrimeUntil(number/2)
   }
-println(firstExercise("David", 28))
-println(secondExercise(20))
-println(thirdExercise(20))
-println(fourthExercise(37))
+  println(firstExercise("David", 28))
+  println(secondExercise(20))
+  println(thirdExercise(5))
+  println(thirdExercise(20))
+  println(fourthExercise(37))
   println(fourthExercise(2003))
   println(fourthExercise(37 *17))
+
 }
