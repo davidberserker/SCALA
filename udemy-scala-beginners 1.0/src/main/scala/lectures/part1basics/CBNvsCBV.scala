@@ -28,9 +28,9 @@ object CBNvsCBV extends App {
   calledByName(System.nanoTime())
 
   //Examples
-  def infinite(): Int = 1 + infinite()
+  private def infinite(): Int = 1 + infinite()
 
-  def printFirst(x: Int, y: => Int) = println(x)
+  private def printFirst(x: Int, y: => Int): Unit = println(x)
 
   //If we run the next code it'll crash because is stack overflow
   //printFirst(infinite(), 34)
